@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>index.html</title>
+<link href="assets/css/reset.css" rel="stylesheet" type="text/css">
+<link href="assets/css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+	<h1>Chrystal Collector</h1>
+	<div class="rules">
+		<ul>
+			<li>You will be given number to start the game.</li>
+			<li>Collect the same amount by clicking the crystals with different scores.</li>
+			<li>If you match the score - You win. If your score goes above the number - you lose.</li>
+			<li>The values of crystals are hidden.</li>
+			<li>All the values are resets every time you start the new round.</li>
+		</ul>
+	</div>
+	<div id="givenNumber">		
+	</div>
+	<div id="wins">Wins:</div>
+	<div id="losses">Losses:</div>
+	<div class="row">
+		<div class="gems">
+			<button id="gem1"><img src="assets/images/gem1.jpg"></button>
+			<button id="gem2"><img src="assets/images/gem2.jpg"></button>
+			<button id="gem3"><img src="assets/images/gem3.jpg"></button>
+			<button id="gem4"><img src="assets/images/gem4.jpg"></button>
+		</div>
+		<div id="totalScore">Your score:<p></p> </div>
+	</div>
+</body>
+<script type="text/javascript">
+		var number;
+		var gem1;
+		var gem2;
+		var gem3;
+		var gem4;
+	
+	$(document).ready(function() {
+		number = Math.floor((Math.random() * 101) + 19);
+		$('#givenNumber').text(number);
+		gem1 = Math.floor((Math.random() * 10) + 1);
+		gem2 = Math.floor((Math.random() * 10) + 1);
+		gem3 = Math.floor((Math.random() * 10) + 1);
+		gem4 = Math.floor((Math.random() * 10) + 1);
+		
+		$("button").click( function() {
+			var	gemValue = $(this).val(); 
+            $("p").append(gemValue);
+		});
+	});
+</script>
+</html>

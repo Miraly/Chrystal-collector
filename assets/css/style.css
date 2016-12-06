@@ -1,0 +1,65 @@
+body {
+	font-family: Gotham, Helvetica Neue, Helvetica, Arial," sans-serif";
+	box-sizing: border-box;
+}
+
+h1 {
+	text-align: center;
+	font-size: 50px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	color:#338BB5;
+}
+
+.rules {
+	width: 50%;
+	padding: 20px;
+	margin: 10px;
+	line-height: 2;
+	font-size: 12px;
+	background-color: #C1C1C1;
+	float: left;
+}
+
+#givenNumber {
+	font-size: 70px;
+	color: #2A51A2;
+	text-align: center;
+	padding-top: 35px;
+}
+
+#wins {
+	clear: both;
+	float: left;
+	font-size: 30px;
+	color: #464646;
+	text-align: center;
+	width: 45%;
+	padding: 30px;
+}
+
+#losses {
+	float: right;
+	font-size: 30px;
+	color: #464646;
+	text-align: center;
+	width: 45%;
+	padding: 30px;
+}
+
+.row {
+	clear: both;
+}
+
+.gems {
+	text-align: center;
+	width: 50%;
+	float: left;
+}
+
+#totalScore {
+	font-size: 40px;
+	color: #2A51A2;
+	text-align: center;
+	padding-top: 35px;
+}
