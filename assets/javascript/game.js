@@ -31,7 +31,7 @@
 		}
 		
 		total = 0;
-	 	$("p").html(total);
+	 	$("#total").html(total);
 		}
 		
 		reset();	
@@ -43,7 +43,7 @@
 		$("button").click(function() {
 			console.log(this);
 			total = parseInt(total) + parseInt($(this).val());  
-			$("p").html(total);
+			$("#total").html(total);
 			
 			if (total == number) {
 			winCounter++;
