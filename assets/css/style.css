@@ -3,7 +3,10 @@ body {
 	box-sizing: border-box;
 }
 
-@media screen and (min-width:980px) {
+@media screen 
+	and (min-width: 640px)
+  	and (max-width: 1600px)
+{
 	h1 {
 		text-align: center;
 		font-size: 50px;
@@ -30,7 +33,7 @@ body {
 	}
 
 	#wins {
-		clear: both;
+		box-sizing: border-box;
 		float: left;
 		font-size: 30px;
 		color: #464646;
@@ -40,6 +43,7 @@ body {
 	}
 
 	#losses {
+		box-sizing: border-box;
 		float: right;
 		font-size: 30px;
 		color: #464646;
@@ -56,6 +60,14 @@ body {
 		text-align: center;
 		width: 50%;
 		float: left;
+	}
+	
+	button {
+		width: 20%;
+	}
+	
+	img {
+		width: 100%;
 	}
 
 	#totalScore {
