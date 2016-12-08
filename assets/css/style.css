@@ -58,6 +58,7 @@ h1 {
 }
 
 #totalScore {
+	display: inline;
 	font-size: 40px;
 	color: #2A51A2;
 	text-align: center;
