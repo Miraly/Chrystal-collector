@@ -31,7 +31,10 @@ body {
 		text-align: center;
 		padding-top: 35px;
 	}
-
+	
+	.row {
+		clear: both;
+	}
 	#wins {
 		box-sizing: border-box;
 		float: left;
