@@ -8,8 +8,6 @@
 	var loseCounter = 0;
 
 	$(document).ready(function() {
-		function reset() {
-		
 		number = Math.floor((Math.random() * 101) + 19);
 		$('#givenNumber').text(number);
 		
@@ -30,11 +28,6 @@
 		gem4 = Math.floor((Math.random() * 11) + 1);
 		}
 		
-		total = 0;
-	 	$("p").html(total);
-		}
-		
-		reset();	
 		$("#gem1").val(gem1);
 		$("#gem2").val(gem2);
 		$("#gem3").val(gem3);
@@ -48,13 +41,13 @@
 			if (total == number) {
 			winCounter++;
 			$("#wins").html("Wins: " + winCounter);
-			setTimeout(reset, 1000);
 			} else if (total > number) {
     		loseCounter++;
 			$("#losses").html("Losses: " + loseCounter);
-			setTimeout(reset, 1000);
 			}
 		});
 		
-	
+		
+		
+
 	});
