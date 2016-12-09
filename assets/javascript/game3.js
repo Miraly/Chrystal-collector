@@ -1,5 +1,8 @@
 	var number;
-	var gem = [];
+	var gem1;
+	var gem2;
+	var gem3;
+	var gem4;
 	var total = 0;
 	var winCounter = 0;
 	var loseCounter = 0;
@@ -7,37 +10,35 @@
 	$(document).ready(function() {
 		function reset() {
 		
-		gem = [];
-		
 		number = Math.floor((Math.random() * 101) + 19);
 		$('#givenNumber').text(number);
-			
 		
-        for (var i = 0; i < 4; i++) {
-            gem[i] = Math.floor((Math.random() * 11) + 1);
-            
-				var repeat = true;
-                while (repeat) {
-                    repeat = false;
-                    for (var j = 0; j < i; j++) {
-                        if (gem[i] === gem[j]) {
-                            repeat = true;
-                            gem[i] = Math.floor((Math.random() * 11) + 1);
-                        }
-                    }
-                }
-			gem.push(gem[i]);
-           
+		gem1 = Math.floor((Math.random() * 11) + 1);
+		
+		gem2 = Math.floor((Math.random() * 11) + 1);
+		if (gem1 === gem2) {
+		gem2 = Math.floor((Math.random() * 11) + 1);
 		}
+		
+		gem3 = Math.floor((Math.random() * 11) + 1);
+		if (gem1 === gem3 || gem2 === gem3 ) {
+		gem3 = Math.floor((Math.random() * 11) + 1);
+		}
+						
+		gem4 = Math.floor((Math.random() * 11) + 1);
+		if (gem1 === gem4 || gem2 === gem4 || gem3 === gem4 ) {
+		gem4 = Math.floor((Math.random() * 11) + 1);
+		}
+		
 		total = 0;
 	 	$("#total").html(total);
 		}
 		
 		reset();	
-		$("#gem1").val(gem[0]);
-		$("#gem2").val(gem[1]);
-		$("#gem3").val(gem[2]);
-		$("#gem4").val(gem[3]);
+		$("#gem1").val(gem1);
+		$("#gem2").val(gem2);
+		$("#gem3").val(gem3);
+		$("#gem4").val(gem4);
 		
 		$("button").click(function() {
 			console.log(this);
